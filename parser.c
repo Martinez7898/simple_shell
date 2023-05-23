@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * is_cmd - determines if a file is an executable command
+ * is_cmd - used to determine if a file is an executable command
  * @info: the info struct
  * @path: path to the file
  *
@@ -24,7 +24,7 @@ int is_cmd(info_t *info, char *path)
 
 /**
  * dup_chars - duplicates characters
- * @pathstr: the PATH string
+ * @pathstr: PATH string
  * @start: starting index
  * @stop: stopping index
  *
@@ -43,12 +43,12 @@ char *dup_chars(char *pathstr, int start, int stop)
 }
 
 /**
- * find_path - finds this cmd in the PATH string
+ * find_path - finds this cmd in PATH string
  * @info: the info struct
  * @pathstr: the PATH string
  * @cmd: the cmd to find
  *
- * Return: full path of cmd if found or NULL
+ * Return: full path of cmd if NULL or found
  */
 char *find_path(info_t *info, char *pathstr, char *cmd)
 {
@@ -84,4 +84,3 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 	}
 	return (NULL);
 }
-
